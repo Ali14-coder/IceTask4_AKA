@@ -47,7 +47,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(lblWelcome);
             Name = "Welcome";
-            Text = "Welcome";
+            Text = "Welcome to R.D.G.U.R.D.O";
             Load += Welcome_Load;
             ResumeLayout(false);
             PerformLayout();

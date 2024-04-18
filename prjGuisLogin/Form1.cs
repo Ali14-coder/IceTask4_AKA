@@ -24,8 +24,8 @@ namespace prjGuisLogin
         private void btnLogin_Click(object sender, EventArgs e)
         {
             User Login = new User();
-            Login.Name=txtNameLogin.Text;
-            Login.Password=txtPassLogin.Text;
+            Login.Name = txtNameLogin.Text;
+            Login.Password = txtPassLogin.Text;
             UserDB user = new UserDB();
             bool bOutput = user.CheckUser(Login);
             if (bOutput)
@@ -40,6 +40,15 @@ namespace prjGuisLogin
                 MessageBox.Show("You dont exist or don't belong here :) ");
                 txtNameLogin.Focus();
             }
+        }
+
+        private void btnResigter_Click(object sender, EventArgs e)
+        {
+
+            gbWelcome.Visible = false;
+            gbLogin.Visible = false;
+            gbRegister.Visible = true;
+
         }
     }
 }

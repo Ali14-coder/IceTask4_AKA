@@ -30,9 +30,9 @@
         {
             gbWelcome = new GroupBox();
             panel1 = new Panel();
+            btnResigter = new Button();
             btnWelcome = new Button();
             gbLogin = new GroupBox();
-            btnRegPage = new Button();
             btnLogin = new Button();
             panel2 = new Panel();
             label2 = new Label();
@@ -40,13 +40,12 @@
             txtPassLogin = new TextBox();
             txtNameLogin = new TextBox();
             gbRegister = new GroupBox();
-            btnLoginScreen = new Button();
-            btnRegUser = new Button();
             panel3 = new Panel();
             label3 = new Label();
             label4 = new Label();
             txtPassRegister = new TextBox();
             txtNameReg = new TextBox();
+            btnRegUser = new Button();
             gbWelcome.SuspendLayout();
             panel1.SuspendLayout();
             gbLogin.SuspendLayout();
@@ -68,25 +67,35 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.ActiveCaption;
+            panel1.Controls.Add(btnResigter);
             panel1.Controls.Add(btnWelcome);
             panel1.Location = new Point(60, 56);
             panel1.Name = "panel1";
             panel1.Size = new Size(200, 100);
             panel1.TabIndex = 1;
             // 
+            // btnResigter
+            // 
+            btnResigter.Location = new Point(51, 56);
+            btnResigter.Name = "btnResigter";
+            btnResigter.Size = new Size(94, 23);
+            btnResigter.TabIndex = 1;
+            btnResigter.Text = "Sign Up";
+            btnResigter.UseVisualStyleBackColor = true;
+            btnResigter.Click += btnResigter_Click;
+            // 
             // btnWelcome
             // 
-            btnWelcome.Location = new Point(22, 40);
+            btnWelcome.Location = new Point(51, 20);
             btnWelcome.Name = "btnWelcome";
-            btnWelcome.Size = new Size(165, 23);
+            btnWelcome.Size = new Size(94, 23);
             btnWelcome.TabIndex = 0;
-            btnWelcome.Text = "Login and Reg";
+            btnWelcome.Text = "Sign In";
             btnWelcome.UseVisualStyleBackColor = true;
             btnWelcome.Click += btnWelcome_Click;
             // 
             // gbLogin
             // 
-            gbLogin.Controls.Add(btnRegPage);
             gbLogin.Controls.Add(btnLogin);
             gbLogin.Controls.Add(panel2);
             gbLogin.Location = new Point(375, 12);
@@ -97,22 +106,13 @@
             gbLogin.Text = "Login";
             gbLogin.Visible = false;
             // 
-            // btnRegPage
-            // 
-            btnRegPage.Location = new Point(18, 186);
-            btnRegPage.Name = "btnRegPage";
-            btnRegPage.Size = new Size(75, 23);
-            btnRegPage.TabIndex = 3;
-            btnRegPage.Text = "Register";
-            btnRegPage.UseVisualStyleBackColor = true;
-            // 
             // btnLogin
             // 
-            btnLogin.Location = new Point(238, 186);
+            btnLogin.Location = new Point(132, 174);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(75, 23);
             btnLogin.TabIndex = 2;
-            btnLogin.Text = "Login";
+            btnLogin.Text = "Sign In";
             btnLogin.UseVisualStyleBackColor = true;
             btnLogin.Click += btnLogin_Click;
             // 
@@ -162,7 +162,6 @@
             // 
             // gbRegister
             // 
-            gbRegister.Controls.Add(btnLoginScreen);
             gbRegister.Controls.Add(btnRegUser);
             gbRegister.Controls.Add(panel3);
             gbRegister.Location = new Point(12, 241);
@@ -172,24 +171,6 @@
             gbRegister.TabStop = false;
             gbRegister.Text = "Register";
             gbRegister.Visible = false;
-            // 
-            // btnLoginScreen
-            // 
-            btnLoginScreen.Location = new Point(18, 186);
-            btnLoginScreen.Name = "btnLoginScreen";
-            btnLoginScreen.Size = new Size(75, 23);
-            btnLoginScreen.TabIndex = 3;
-            btnLoginScreen.Text = "Login Screen";
-            btnLoginScreen.UseVisualStyleBackColor = true;
-            // 
-            // btnRegUser
-            // 
-            btnRegUser.Location = new Point(215, 186);
-            btnRegUser.Name = "btnRegUser";
-            btnRegUser.Size = new Size(98, 23);
-            btnRegUser.TabIndex = 2;
-            btnRegUser.Text = "Register user";
-            btnRegUser.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
@@ -235,6 +216,15 @@
             txtNameReg.Size = new Size(100, 23);
             txtNameReg.TabIndex = 0;
             // 
+            // btnRegUser
+            // 
+            btnRegUser.Location = new Point(107, 173);
+            btnRegUser.Name = "btnRegUser";
+            btnRegUser.Size = new Size(98, 23);
+            btnRegUser.TabIndex = 2;
+            btnRegUser.Text = "Sign Up";
+            btnRegUser.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -271,15 +261,14 @@
         private Label label1;
         private TextBox txtPassLogin;
         private TextBox txtNameLogin;
-        private Button btnRegPage;
         private Button btnLogin;
         private GroupBox gbRegister;
-        private Button btnLoginScreen;
-        private Button btnRegUser;
         private Panel panel3;
         private Label label3;
         private Label label4;
         private TextBox txtPassRegister;
         private TextBox txtNameReg;
+        private Button btnResigter;
+        private Button btnRegUser;
     }
 }
