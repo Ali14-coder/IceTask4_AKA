@@ -8,6 +8,15 @@ namespace prjGuisLogin
 {
     public  class User
     {
+        private string name;
+        private string password;
+
+        public User(string name, string password)
+        {
+            this.name = name;
+            this.password = password;
+        }
+
         public string Name { get; set; }
         public string Password { get; set; }
 

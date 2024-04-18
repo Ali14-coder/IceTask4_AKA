@@ -30,14 +30,14 @@ namespace prjGuisLogin
             bool bOutput = user.CheckUser(Login);
             if (bOutput)
             {
-                MessageBox.Show("Weclome to the new world ");
+                MessageBox.Show("Weclome to R.D.G.U.N.D.O ");
                 Welcome welcome = new Welcome();
                 welcome.Show();
                 this.Hide();
             }
             else
             {
-                MessageBox.Show("You dont exist or don't belong here :) ");
+                MessageBox.Show("User Does not Exist ");
                 txtNameLogin.Focus();
             }
         }
@@ -48,6 +48,23 @@ namespace prjGuisLogin
             gbWelcome.Visible = false;
             gbLogin.Visible = false;
             gbRegister.Visible = true;
+
+        }
+
+        private void btnRegUser_Click(object sender, EventArgs e) // trying to get the signup button to work and store infomation in the array
+        {
+            UserDB Login = new User();
+            string Name = txtNameReg.Text;
+            string Password = txtPassRegister.Text;
+
+            Login.AddUser(new User(Name, Password));
+
+            gbWelcome.Visible = false;
+            gbLogin.Visible = true;
+            gbRegister.Visible = false;
+
+
+
 
         }
     }

@@ -34,9 +34,10 @@
             // lblWelcome
             // 
             lblWelcome.AutoSize = true;
+            lblWelcome.Font = new Font("Impact", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 186);
             lblWelcome.Location = new Point(352, 147);
             lblWelcome.Name = "lblWelcome";
-            lblWelcome.Size = new Size(38, 15);
+            lblWelcome.Size = new Size(81, 34);
             lblWelcome.TabIndex = 0;
             lblWelcome.Text = "label1";
             // 

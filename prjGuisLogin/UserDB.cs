@@ -24,9 +24,9 @@ namespace prjGuisLogin
             }
         }
 
-        public void AddUser(User user)
+        public void AddUser(User newUser)
         {
-            userList.Add(user);
+            userList.Add(newUser);
         }
         public override string ToString()
         {
