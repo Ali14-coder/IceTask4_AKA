@@ -2,9 +2,11 @@ namespace prjGuisLogin
 {
     public partial class Form1 : Form
     {
+        List<User> userList = new List<User>();
         public Form1()
         {
             InitializeComponent();
+
         }
 
         private void btnWelcome_Click(object sender, EventArgs e)
@@ -23,6 +25,11 @@ namespace prjGuisLogin
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            UserDB userDB = new UserDB();
+
+            userList = userDB.GetUser(txtNameLogin.Text);
+
+
             User Login = new User();
             Login.Name=txtNameLogin.Text;
             Login.Password=txtPassLogin.Text;

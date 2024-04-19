@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Dapper;
 
 namespace prjGuisLogin
 {
@@ -13,6 +14,10 @@ namespace prjGuisLogin
 
         private static List<User> userList = new List<User>();
 
+        public List<User> GetUser (string Name)
+        {
+            throw new NotImplementedException();
+        }
         public UserDB()
         {
             if (userList.Count == 0)
@@ -25,8 +30,9 @@ namespace prjGuisLogin
         }
 
         public void AddUser(User user)
-        {
-            userList.Add(user);
+        {//need to add a reference
+            using (IDbconnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("FitnessJunkieDB"))) ;
+                userList.Add(user);
         }
         public override string ToString()
         {
@@ -75,5 +81,7 @@ namespace prjGuisLogin
         {
             return ApprovedUser.Name;
         }
+
+
     }
 }
