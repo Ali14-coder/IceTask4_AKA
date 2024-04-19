@@ -60,7 +60,7 @@ namespace prjGuisLogin
 
         private void btnRegUser_Click(object sender, EventArgs e) // trying to get the signup button to work and store infomation in the array
         {
-            UserDB Login = new User();
+            UserDB Login = new UserDB();
             string Name = txtNameReg.Text;
             string Password = txtPassRegister.Text;
 
