@@ -23,8 +23,8 @@ namespace prjGuisLogin
             if (userList.Count == 0)
             {
                 User u = new User();
-                u.Name = "Jack";
-                u.Password = "1234";
+                u.Name = "Maxinet";
+                u.Password = "6789";
                 userList.Add(u);
             }
         }
@@ -53,10 +53,10 @@ namespace prjGuisLogin
             {
                 if (item.Name.Equals(user.Name))
                 {
-                    if(item.Password.Equals(user.Password))
+                    if (item.Password.Equals(user.Password))
                     {
                         Valid = true;
-                        ApprovedUser=item;
+                        ApprovedUser = item;
                         break;
                     }
                 }
