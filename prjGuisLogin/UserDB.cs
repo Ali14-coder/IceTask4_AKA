@@ -47,10 +47,10 @@ namespace prjGuisLogin
             {
                 if (item.Name.Equals(user.Name))
                 {
-                    if(item.Password.Equals(user.Password))
+                    if (item.Password.Equals(user.Password))
                     {
                         Valid = true;
-                        ApprovedUser=item;
+                        ApprovedUser = item;
                         break;
                     }
                 }
